@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>xunit.ioc.autofac</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extension to XUnit that allows you to resolve test classes out of a dependency injection container using Autofac.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>xunit ioc autofac</tags>
+    <dependencies>
+      <dependency id="Autofac" version="3.0.0" />
+      <dependency id="xunit.ioc" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
