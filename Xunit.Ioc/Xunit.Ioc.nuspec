@@ -13,7 +13,6 @@
     <copyright>Copyright 2013</copyright>
     <tags>xunit ioc</tags>
     <dependencies>
-      <dependency id="Autofac" version="3.0.0" />
       <dependency id="xunit" version="1.9.0" />
     </dependencies>
   </metadata>
