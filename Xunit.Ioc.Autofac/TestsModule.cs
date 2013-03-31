@@ -27,10 +27,10 @@ namespace Xunit.Ioc.Autofac
 			var testClasses = from assembly in _assemblies
 			                  from type in assembly.GetTypes()
 			                  where type.IsClass && type.IsAbstract == false && type.IsGenericTypeDefinition == false
-			                  from method in type.GetMethods()
-			                  where method.GetCustomAttributes(typeof(IocInjectedFactAttribute), false)
-				                  .Cast<IocInjectedFactAttribute>()
-				                  .Any()
+                              let runWithAttr = type.GetCustomAttributes(typeof(RunWithAttribute), false)
+				                  .Cast<RunWithAttribute>()
+				                  .FirstOrDefault()
+			                  where runWithAttr != null && runWithAttr.TestClassCommand == typeof(IocTestClassCommand)
 			                  select type;
 
 			foreach (var testClass in testClasses)

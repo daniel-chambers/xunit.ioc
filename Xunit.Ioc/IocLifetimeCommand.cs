@@ -4,17 +4,18 @@ using Xunit.Sdk;
 
 namespace Xunit.Ioc
 {
-	public class IocLifetimeCommand : FactCommand
+	public class IocLifetimeCommand : TestCommand
 	{
-		internal const string TestLifetimeTag = "TestLifetime";
+	    internal const string TestLifetimeTag = "TestLifetime";
+	    private readonly ITestCommand _innerCommand;
 
-		public IocLifetimeCommand(IMethodInfo method)
-			: base(method)
-		{
-
+	    public IocLifetimeCommand(ITestCommand innerCommand, IMethodInfo method)
+            : base(method, MethodUtility.GetDisplayName(method), MethodUtility.GetTimeoutParameter(method))
+	    {
+		    _innerCommand = innerCommand;
 		}
 
-		public override bool ShouldCreateInstance
+	    public override bool ShouldCreateInstance
 		{
 			get { return false; } //We're creating the instance out of the container
 		}
@@ -28,7 +29,7 @@ namespace Xunit.Ioc
 			using (var lifetimeScope = bootstrapper.CreateScope())
 			{
 				testClass = lifetimeScope.GetType(testMethod.Class.Type);
-				return base.Execute(testClass);
+			    return _innerCommand.Execute(testClass);
 			}
 		}
 
