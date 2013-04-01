@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of a dependency injection container.</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Changed away from using a custom FactAttribute towards using a custom ITestClassCommand for use with the XUnit RunWithAttribute.</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>xunit ioc</tags>
     <dependencies>
