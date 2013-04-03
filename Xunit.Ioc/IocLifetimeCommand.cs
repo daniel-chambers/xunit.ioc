@@ -6,7 +6,6 @@ namespace Xunit.Ioc
 {
 	public class IocLifetimeCommand : TestCommand
 	{
-	    internal const string TestLifetimeTag = "TestLifetime";
 	    private readonly ITestCommand _innerCommand;
 
 	    public IocLifetimeCommand(ITestCommand innerCommand, IMethodInfo method)

@@ -53,6 +53,7 @@
     <Compile Include="AutofacDependencyResolver.cs" />
     <Compile Include="AutofacDependencyScope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationExtensions.cs" />
     <Compile Include="TestsModule.cs" />
   </ItemGroup>
   <ItemGroup>
