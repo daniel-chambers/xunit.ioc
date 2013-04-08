@@ -1,5 +1,6 @@
 ﻿using NSubstitute;
 using Xunit.Extensions;
+using Xunit.Should;
 
 namespace Xunit.Ioc.Tests
 {
@@ -15,16 +16,16 @@ namespace Xunit.Ioc.Tests
         }
 
         [Fact]
-        public void ItIsInjectedWhenAFactAttributeIsUsed()
+        public void DependencyIsInjectedWhenAFactAttributeIsUsed()
         {
-            Assert.NotNull(_dependency);
+            _dependency.ShouldNotBeNull();
         }
 
         [Theory]
         [InlineData(1)]
-        public void ItIsInjectedWhenATheoryAttributeIsUsed(int param)
+        public void DependencyIsInjectedWhenATheoryAttributeIsUsed(int param)
         {
-            Assert.NotNull(_dependency);
+            _dependency.ShouldNotBeNull();
         }
     }
 
