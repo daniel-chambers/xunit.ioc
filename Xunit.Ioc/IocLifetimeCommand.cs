@@ -4,21 +4,32 @@ using Xunit.Sdk;
 
 namespace Xunit.Ioc
 {
+    /// <summary>
+    /// A <see cref="ITestCommand"/> that wraps any other <see cref="ITestCommand"/>
+    /// and resolves the test class instance from the container.
+    /// </summary>
+    /// <remarks>
+    /// These are manufactured by the <see cref="IocTestClassCommand"/>.
+    /// </remarks>
     public class IocLifetimeCommand : TestCommand
     {
         private readonly ITestCommand _innerCommand;
 
+        /// <param name="innerCommand">The <see cref="ITestCommand"/> to wrap</param>
+        /// <param name="method">The method being used as a test</param>
         public IocLifetimeCommand(ITestCommand innerCommand, IMethodInfo method)
             : base(method, MethodUtility.GetDisplayName(method), MethodUtility.GetTimeoutParameter(method))
         {
             _innerCommand = innerCommand;
         }
 
+        /// <inheritdoc/>
         public override bool ShouldCreateInstance
         {
             get { return false; } //We're creating the instance out of the container
         }
 
+        /// <inheritdoc/>
         public override MethodResult Execute(object testClass)
         {
             if (testClass != null)
