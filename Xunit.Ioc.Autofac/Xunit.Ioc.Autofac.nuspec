@@ -9,12 +9,14 @@
     <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of Autofac.</description>
-    <releaseNotes>Changed away from using a custom FactAttribute towards using a custom ITestClassCommand for use with the XUnit RunWithAttribute.</releaseNotes>
+    <releaseNotes>- Added RegistrationHelpers to help register components as InstancePerTest
+- Added XmlDoc for public APIs
+    </releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>xunit ioc autofac</tags>
     <dependencies>
       <dependency id="Autofac" version="3.0.0" />
-      <dependency id="xunit.ioc" version="1.1" />
+      <dependency id="xunit.ioc" version="1.1.1.0" />
     </dependencies>
   </metadata>
 </package>
