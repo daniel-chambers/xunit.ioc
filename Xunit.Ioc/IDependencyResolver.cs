@@ -1,7 +1,7 @@
 ﻿namespace Xunit.Ioc
 {
-	public interface IDependencyResolver : IDependencyScope
-	{
-		IDependencyScope CreateScope();
-	}
+    public interface IDependencyResolver : IDependencyScope
+    {
+        IDependencyScope CreateScope();
+    }
 }

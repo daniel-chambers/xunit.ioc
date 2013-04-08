@@ -2,18 +2,18 @@
 
 namespace Xunit.Ioc.Autofac
 {
-	public class AutofacDependencyResolver : AutofacDependencyScope, IDependencyResolver
-	{
-		public const string TestLifetimeScopeTag = "TestLifetime";
+    public class AutofacDependencyResolver : AutofacDependencyScope, IDependencyResolver
+    {
+        public const string TestLifetimeScopeTag = "TestLifetime";
 
-		public AutofacDependencyResolver(ILifetimeScope lifetimeScope)
-			: base(lifetimeScope)
-		{
-		}
+        public AutofacDependencyResolver(ILifetimeScope lifetimeScope)
+            : base(lifetimeScope)
+        {
+        }
 
-		public IDependencyScope CreateScope()
-		{
-			return new AutofacDependencyScope(LifetimeScope.BeginLifetimeScope(TestLifetimeScopeTag));
-		}
-	}
+        public IDependencyScope CreateScope()
+        {
+            return new AutofacDependencyScope(LifetimeScope.BeginLifetimeScope(TestLifetimeScopeTag));
+        }
+    }
 }
