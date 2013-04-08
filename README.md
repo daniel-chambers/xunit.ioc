@@ -41,6 +41,9 @@ public class AutofacContainerBootstrapper : IDependencyResolverBootstrapper
     {
         var builder = new ContainerBuilder();
         builder.RegisterType<MyComponent>().As<IMyComponent>();
+        
+        builder.RegisterModule(new TestsModule(typeof(AutofacContainerBootstrapper).Assembly));
+        
         return builder.Build();
     }
 
@@ -55,6 +58,8 @@ public class AutofacContainerBootstrapper : IDependencyResolverBootstrapper
     }
 }
 ```
+
+Note the registration of the `TestsModule` into the container above. This is a helpful Autofac module that will locate all your test classes (searching in the assembly passed into its constructor) that use Xunit.Ioc and will register them in the container.
 
 Now that's done, you can sit back, have your components injected into your test class via the constructor, and write some tests like so:
 
