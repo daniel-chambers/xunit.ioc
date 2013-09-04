@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Xunit.Ioc.Autofac.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
@@ -79,4 +78,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <NuSpec Include="nuget\Xunit.Ioc.Autofac.nuspec" />
+    <NuGetTool Include="nuget\install.ps1" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\build\NuGetPackagePipeline.targets" />
 </Project>

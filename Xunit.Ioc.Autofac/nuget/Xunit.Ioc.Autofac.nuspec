@@ -3,20 +3,18 @@
   <metadata>
     <id>xunit.ioc.autofac</id>
     <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <title>Xunit.Ioc.Autofac</title>
+    <authors>Daniel Chambers</authors>
+    <owners>Daniel Chambers</owners>
     <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of Autofac.</description>
-    <releaseNotes>- Added RegistrationHelpers to help register components as InstancePerTest
-- Added XmlDoc for public APIs
-    </releaseNotes>
+    <releaseNotes>- Added automatic binding redirection when the package is installed to ensure it works with newer versions of xunit</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>xunit ioc autofac</tags>
     <dependencies>
       <dependency id="Autofac" version="3.0.0" />
-      <dependency id="xunit.ioc" version="1.1.1.0" />
+      <dependency id="xunit.ioc" version="1.1.2.0" />
     </dependencies>
   </metadata>
 </package>

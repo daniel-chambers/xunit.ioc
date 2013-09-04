@@ -3,13 +3,13 @@
   <metadata>
     <id>xunit.ioc</id>
     <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <title>Xunit.Ioc</title>
+    <authors>Daniel Chambers</authors>
+    <owners>Daniel Chambers</owners>
     <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of a dependency injection container.</description>
-    <releaseNotes>- Added XmlDoc for public APIs</releaseNotes>
+    <releaseNotes>- Added automatic binding redirection when the package is installed to ensure it works with newer versions of xunit</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>xunit ioc</tags>
     <dependencies>
