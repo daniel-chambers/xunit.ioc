@@ -4,13 +4,13 @@
     <id>xunit.ioc.ninject</id>
     <version>$version$</version>
     <title>Xunit.Ioc.Ninject</title>
-    <authors>Peter Major</authors>
+    <authors>Peter Major, Daniel Chambers</authors>
     <owners>Daniel Chambers</owners>
     <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of Ninject.</description>
-    <releaseNotes>- Added automatic binding redirection when the package is installed to ensure it works with newer versions of xunit</releaseNotes>
-    <copyright>Copyright 2013</copyright>
+    <releaseNotes>- First release of Ninject support</releaseNotes>
+    <copyright>Copyright 2014</copyright>
     <tags>xunit ioc ninject</tags>
     <dependencies>
       <dependency id="Ninject" version="3.2.0" />
