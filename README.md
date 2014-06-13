@@ -88,3 +88,7 @@ public class MyComponentFacts
 ```
 
 If you'd like to see this in action, take a look at the tests in the code (in particular look at the AutofacFacts test class).
+
+## Contributors
+* [Daniel Chambers](https://github.com/daniel-chambers)
+* [Peter Major](https://github.com/petermajor)

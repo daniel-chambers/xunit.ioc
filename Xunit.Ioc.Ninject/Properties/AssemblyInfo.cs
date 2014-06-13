@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Xunit.Ioc.Ninject")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Peter Major")]
+[assembly: AssemblyCompany("Xunit.Ioc Contributors")]
 [assembly: AssemblyProduct("Xunit.Ioc.Ninject")]
-[assembly: AssemblyCopyright("Copyright © Peter Major 2013")]
+[assembly: AssemblyCopyright("Copyright © Xunit.Ioc Contributors 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
