@@ -1,18 +1,17 @@
-﻿using Ninject;
+﻿using System;
+using Ninject;
 
 namespace Xunit.Ioc.Ninject
 {
-    using System;
-
     public class NinjectDependencyResolver : IDependencyResolver
     {
-        private readonly IKernel kernel;
+        private readonly IKernel _kernel;
 
         public const string TestLifetimeScopeTag = "TestLifetime";
 
         public NinjectDependencyResolver(IKernel kernel)
         {
-            this.kernel = kernel;
+            _kernel = kernel;
         }
 
         public IDependencyScope CreateScope()
@@ -26,7 +25,7 @@ namespace Xunit.Ioc.Ninject
 
         public object GetType(Type type)
         {
-            return kernel.Get(type);
+            return _kernel.Get(type);
         }
     }
 }
