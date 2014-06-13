@@ -101,4 +101,6 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <!-- Override the NuGet one to make sure nothing gets done -->
+  <Target Name="BuildPackage" />
 </Project>

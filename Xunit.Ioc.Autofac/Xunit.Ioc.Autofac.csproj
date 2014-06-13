@@ -79,8 +79,10 @@
   </Target>
   -->
   <ItemGroup>
-    <NuSpec Include="nuget\Xunit.Ioc.Autofac.nuspec" />
-    <NuGetTool Include="nuget\install.ps1" />
+    <None Include="Xunit.Ioc.Autofac.nuspec" />
+    <None Include="nuget\install.ps1" />
   </ItemGroup>
-  <Import Project="$(SolutionDir)\build\NuGetPackagePipeline.targets" />
+  <PropertyGroup>
+    <BuildCommand>$(BuildCommand) -IncludeReferencedProjects</BuildCommand>
+  </PropertyGroup>
 </Project>

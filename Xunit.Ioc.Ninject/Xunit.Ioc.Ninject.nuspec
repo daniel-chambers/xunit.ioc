@@ -4,18 +4,17 @@
     <id>xunit.ioc.ninject</id>
     <version>$version$</version>
     <title>Xunit.Ioc.Ninject</title>
-    <authors>Peter Major, Daniel Chambers</authors>
+    <authors>Xunit.Ioc Contributors</authors>
     <owners>Daniel Chambers</owners>
     <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
+    <licenseUrl>https://github.com/daniel-chambers/xunit.ioc/blob/master/LICENCE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of Ninject.</description>
     <releaseNotes>- First release of Ninject support</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>xunit ioc ninject</tags>
-    <dependencies>
-      <dependency id="Ninject" version="3.2.0" />
-      <dependency id="Ninject.Extensions.NamedScope" version="3.2.0" />
-      <dependency id="xunit.ioc" version="1.1.2.0" />
-    </dependencies>
   </metadata>
+  <files>
+    <file src="nuget\install.ps1" target="tools" />
+  </files>
 </package>
