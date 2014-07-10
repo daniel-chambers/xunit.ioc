@@ -15,6 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AEDB3B
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Ioc.Tests", "Xunit.Ioc.Tests\Xunit.Ioc.Tests.csproj", "{62DEBA00-7185-47F6-A0BC-A29B6ADAD903}"
+	ProjectSection(ProjectDependencies) = postProject
+		{391DB1FC-3839-4C0F-A61A-218B98B8C786} = {391DB1FC-3839-4C0F-A61A-218B98B8C786}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Ioc.Ninject", "Xunit.Ioc.Ninject\Xunit.Ioc.Ninject.csproj", "{435D8917-7D5A-4AC6-9EBA-BF9DC3281C28}"
 EndProject
