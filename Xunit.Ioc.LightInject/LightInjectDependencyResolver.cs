@@ -5,6 +5,7 @@ namespace Xunit.Ioc.LightInject
 {
     public class LightInjectDependencyResolver : IDependencyResolver
     {
+        private Scope _currentScope;
         private readonly ServiceContainer _container;
 
         public LightInjectDependencyResolver(ServiceContainer container)
@@ -14,6 +15,10 @@ namespace Xunit.Ioc.LightInject
 
         public void Dispose()
         {
+            if (_currentScope != null)
+            {
+                _currentScope.Dispose();
+            }
         }
 
         public object GetType(Type type)
@@ -23,7 +28,13 @@ namespace Xunit.Ioc.LightInject
 
         public IDependencyScope CreateScope()
         {
-            _container.BeginScope();
+            if (_currentScope != null)
+            {
+                _currentScope.Dispose();
+            }
+
+            _currentScope = _container.BeginScope();
+            
             return this;
         }
     }

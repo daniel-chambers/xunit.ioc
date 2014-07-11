@@ -48,7 +48,7 @@ namespace Xunit.Ioc.Tests.LightInject
         {
             var container = new ServiceContainer();
 
-            container.Register<IDependency>(c => Substitute.For<IDependency>(), new PerScopeLifetime());
+            container.Register(c => Substitute.For<IDependency>(), new PerScopeLifetime());
             container.Register<IOtherDependency, OtherDependency>();
 
             container.RegisterTestModules(typeof(LightInjectTestsBootstrapper).Assembly);
