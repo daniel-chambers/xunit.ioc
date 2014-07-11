@@ -1,7 +1,4 @@
-﻿using Ninject;
-using NSubstitute;
-using Xunit.Extensions;
-using Xunit.Ioc.Ninject;
+﻿using Xunit.Extensions;
 using Xunit.Should;
 
 namespace Xunit.Ioc.Tests.Ninject
@@ -37,29 +34,6 @@ namespace Xunit.Ioc.Tests.Ninject
         {
             _otherDependency.ShouldNotBeNull();
             _otherDependency.Dependency.ShouldBeSameAs(_dependency);
-        }
-    }
-
-    public class NinjectTestsBootstrapper : IDependencyResolverBootstrapper
-    {
-        public static readonly IDependencyResolver DependencyResolver;
-
-        static NinjectTestsBootstrapper()
-        {
-            var kernel = new StandardKernel();
-
-            kernel.Bind<IDependency>().ToMethod<IDependency>(context => Substitute.For<IDependency>()).InstancePerTest();
-
-            kernel.Bind<IOtherDependency>().To<OtherDependency>();
-
-            kernel.Load(new NinjectTestsModule(typeof(NinjectTestsBootstrapper).Assembly));
-
-            DependencyResolver = new NinjectDependencyResolver(kernel);
-        }
-
-        public IDependencyResolver GetResolver()
-        {
-            return DependencyResolver;
         }
     }
 }
