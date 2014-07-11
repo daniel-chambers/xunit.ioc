@@ -4,17 +4,18 @@
     <id>xunit.ioc.autofac</id>
     <version>$version$</version>
     <title>Xunit.Ioc.Autofac</title>
-    <authors>Daniel Chambers</authors>
+    <authors>Xunit.Ioc Contributors</authors>
     <owners>Daniel Chambers</owners>
     <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
+    <licenseUrl>https://github.com/daniel-chambers/xunit.ioc/blob/master/LICENCE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of Autofac.</description>
-    <releaseNotes>- Added automatic binding redirection when the package is installed to ensure it works with newer versions of xunit</releaseNotes>
-    <copyright>Copyright 2013</copyright>
+    <releaseNotes>- Added symbol source packages
+- Tightened xunit allowed versions</releaseNotes>
+    <copyright>Copyright 2014</copyright>
     <tags>xunit ioc autofac</tags>
-    <dependencies>
-      <dependency id="Autofac" version="3.0.0" />
-      <dependency id="xunit.ioc" version="1.1.2.0" />
-    </dependencies>
   </metadata>
+  <files>
+    <file src="nuget\install.ps1" target="tools" />
+  </files>
 </package>

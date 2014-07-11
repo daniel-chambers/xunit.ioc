@@ -66,8 +66,7 @@
   </Target>
   -->
   <ItemGroup>
-    <NuSpec Include="nuget\Xunit.Ioc.nuspec" />
-    <NuGetTool Include="nuget\install.ps1" />
+    <None Include="Xunit.Ioc.nuspec" />
+    <None Include="nuget\install.ps1" />
   </ItemGroup>
-  <Import Project="$(SolutionDir)\build\NuGetPackagePipeline.targets" />
 </Project>

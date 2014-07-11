@@ -1,11 +1,14 @@
 Xunit.Ioc
 =========
 
-Xunit.Ioc is an extension to XUnit that allows you to resolve test classes out of a dependency injection container. Autofac is supported out of the box, but it's very easy to integrate it with your dependency injection container (and we accept pull requests!).
+Xunit.Ioc is an extension to XUnit that allows you to resolve test classes out of a dependency injection container. Autofac and Ninject are supported out of the box, but it's very easy to integrate it with your dependency injection container (and we accept pull requests!).
 
 Why is this useful? Being able to resolve your test classes out of your container makes writing integration tests easy, as you can use the exact same container you use to compose your application normally to compose it for your integration tests. As the test class will be resolved out of your container, you can get the components you want to test injected right into your test class's constructor.
 
-Xunit.Ioc is available via NuGet. Install `xunit.ioc.autofac` for Autofac support, or `xunit.ioc` if you're going to use another container.
+Xunit.Ioc is available via NuGet. 
+* Autofac support: `Install-Package xunit.ioc.autofac` 
+* Ninject support: `Install-Package xunit.ioc.ninject`
+* Any other container: `Install-Package xunit.ioc` (you will need to write the integration components for the other container yourself)
 
 **Note:** If you're using the [XUnit.net Contrib ReSharper plugin](https://xunitcontrib.codeplex.com/) to run your tests, please make sure you have at least v1.0 installed, as it only supports tests using XUnit's `RunWith` attribute since v1.0.
 
@@ -85,3 +88,7 @@ public class MyComponentFacts
 ```
 
 If you'd like to see this in action, take a look at the tests in the code (in particular look at the AutofacFacts test class).
+
+## Contributors
+* [Daniel Chambers](https://github.com/daniel-chambers)
+* [Peter Major](https://github.com/petermajor)

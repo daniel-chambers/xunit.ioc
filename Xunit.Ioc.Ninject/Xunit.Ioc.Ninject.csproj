@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Xunit.Ioc.Ninject.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Xunit.Ioc.Ninject.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject">
@@ -52,8 +54,8 @@
     <Compile Include="RegistrationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NuGetTool Include="nuget\install.ps1" />
-    <NuSpec Include="nuget\Xunit.Ioc.Ninject.nuspec" />
+    <None Include="nuget\install.ps1" />
+    <None Include="Xunit.Ioc.Ninject.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -77,4 +79,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <BuildCommand>$(BuildCommand) -IncludeReferencedProjects</BuildCommand>
+  </PropertyGroup>
 </Project>
