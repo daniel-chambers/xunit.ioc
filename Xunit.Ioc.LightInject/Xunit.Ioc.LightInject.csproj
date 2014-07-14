@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LightInjectDependencyScope.cs" />
-    <Compile Include="LightInjectTestCompositeRoot.cs" />
+    <Compile Include="LightInjectTestModule.cs" />
     <Compile Include="LightInjectDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
