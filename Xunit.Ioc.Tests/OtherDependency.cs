@@ -13,7 +13,6 @@ namespace Xunit.Ioc.Tests
 
         public void Dispose()
         {
-            throw new NotImplementedException();
         }
     }
 }

@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LightInjectDependencyScope.cs" />
     <Compile Include="LightInjectTestCompositeRoot.cs" />
     <Compile Include="LightInjectDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
