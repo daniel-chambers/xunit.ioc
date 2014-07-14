@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using Ninject.Modules;
 using Ninject.Extensions.NamedScope;
@@ -30,19 +29,10 @@ namespace Xunit.Ioc.Ninject
         }
 
         /// <inheritdoc/>
-        public override void Load() 
+        public override void Load()
         {
-            var testClasses = from assembly in _assemblies
-                              from type in assembly.GetTypes()
-                              where type.IsClass && type.IsAbstract == false && type.IsGenericTypeDefinition == false
-                              let runWithAttr = type.GetCustomAttributes(typeof(RunWithAttribute), false)
-                                  .Cast<RunWithAttribute>()
-                                  .FirstOrDefault()
-                              where runWithAttr != null && runWithAttr.TestClassCommand == typeof(IocTestClassCommand)
-                              select type;
-
-            foreach (var testClass in testClasses)
-                Bind(testClass).ToSelf().DefinesNamedScope(NinjectDependencyResolver.TestLifetimeScopeTag);
+            _assemblies.RegisterTestClasses(
+                t => Bind(t).ToSelf().DefinesNamedScope(NinjectDependencyResolver.TestLifetimeScopeTag));
         }
     }
 }

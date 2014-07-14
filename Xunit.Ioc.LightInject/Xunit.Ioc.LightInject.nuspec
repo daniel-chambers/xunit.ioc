@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>xunit.ioc.lightinject</id>
+    <version>$version$</version>
+    <title>Xunit.Ioc.LightInject</title>
+    <authors>Xunit.Ioc Contributors</authors>
+    <owners>Daniel Chambers</owners>
+    <projectUrl>https://github.com/daniel-chambers/xunit.ioc</projectUrl>
+    <licenseUrl>https://github.com/daniel-chambers/xunit.ioc/blob/master/LICENCE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extension to XUnit that allows you to resolve test classes out of LightInject.</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>xunit ioc lightinject</tags>
+  </metadata>
+  <files>
+    <file src="nuget\install.ps1" target="tools" />
+  </files>
+</package>
