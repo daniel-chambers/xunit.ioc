@@ -10,7 +10,7 @@
     <licenseUrl>https://github.com/daniel-chambers/xunit.ioc/blob/master/LICENCE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of Ninject.</description>
-    <releaseNotes>- First release of Ninject support</releaseNotes>
+    <releaseNotes>Fix bug where create using ninject kernel within a factory crashed</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>xunit ioc ninject</tags>
   </metadata>
