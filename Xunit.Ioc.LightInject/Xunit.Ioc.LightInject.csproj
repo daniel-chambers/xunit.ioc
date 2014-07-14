@@ -56,6 +56,7 @@
   <ItemGroup>
     <None Include="nuget\install.ps1" />
     <None Include="packages.config" />
+    <None Include="Xunit.Ioc.LightInject.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xunit.Ioc\Xunit.Ioc.csproj">
