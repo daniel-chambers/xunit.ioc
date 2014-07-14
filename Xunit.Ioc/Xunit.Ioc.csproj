@@ -52,6 +52,7 @@
     <Compile Include="IocLifetimeCommand.cs" />
     <Compile Include="IocTestClassCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestClassEnumerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
