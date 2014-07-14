@@ -6,15 +6,16 @@ using System.Reflection;
 namespace Xunit.Ioc
 {
     /// <summary>
-    /// 
+    /// This class provides extention methods to ease setting up your container. 
     /// </summary>
+    /// <remarks>
+    /// It searches for all test classes with the <see cref="RunWithAttribute"/> set to use
+    /// the <see cref="IocTestClassCommand"/>.
+    /// </remarks>
     static public class TestClassEnumerator
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="assemblies"></param>
-        /// <returns></returns>
+        /// <param name="assemblies">The list of <see cref="Assembly"/> to scan</param>
+        /// <returns>List of <see cref="Type"/>s found</returns>
         public static IEnumerable<Type> GetTestClasses(this IEnumerable<Assembly> assemblies)
         {
             return from assembly in assemblies
@@ -27,22 +28,16 @@ namespace Xunit.Ioc
                 select type;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="assembly"></param>
-        /// <returns></returns>
+        /// <param name="assembly">The <see cref="Assembly"/> to scan</param>
+        /// <returns>List of <see cref="Type"/>s found</returns>
         public static IEnumerable<Type> GetTestClasses(this Assembly assembly)
         {
             var assemblies = new[] { assembly };
             return assemblies.GetTestClasses();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="assemblies"></param>
-        /// <param name="registerAction"></param>
+        /// <param name="assemblies">The list of <see cref="Assembly"/>s to scan</param>
+        /// <param name="registerAction">An action to execute for each <see cref="Type"/> found</param>
         public static void RegisterTestClasses(this IEnumerable<Assembly> assemblies, Action<Type> registerAction)
         {
             foreach (var type in assemblies.GetTestClasses())
@@ -51,11 +46,8 @@ namespace Xunit.Ioc
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="assembly"></param>
-        /// <param name="registerAction"></param>
+        /// <param name="assembly">The <see cref="Assembly"/> to scan</param>
+        /// <param name="registerAction">An action to execute for each <see cref="Type"/> found</param>
         public static void RegisterTestClasses(this Assembly assembly, Action<Type> registerAction)
         {
             foreach (var type in assembly.GetTestClasses())
