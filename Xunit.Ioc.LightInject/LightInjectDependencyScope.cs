@@ -21,6 +21,10 @@ namespace Xunit.Ioc.LightInject
 
         public object GetType(Type type)
         {
+            if (_container.ScopeManagerProvider.GetScopeManager().CurrentScope != _scope)
+            {
+                throw new InvalidOperationException("Attempt to create scope intance withing the wrong scope");
+            }
             return _container.GetInstance(type);
         }
     }
