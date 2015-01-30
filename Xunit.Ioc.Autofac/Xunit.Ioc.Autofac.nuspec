@@ -10,9 +10,9 @@
     <licenseUrl>https://github.com/daniel-chambers/xunit.ioc/blob/master/LICENCE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extension to XUnit that allows you to resolve test classes out of Autofac.</description>
-    <releaseNotes>- Added symbol source packages
-- Tightened xunit allowed versions</releaseNotes>
-    <copyright>Copyright 2014</copyright>
+    <releaseNotes>- Added the ability to use InstancePerRequest registrations
+- Dependency upgrade to Autofac 3.4.0</releaseNotes>
+    <copyright>Copyright 2015</copyright>
     <tags>xunit ioc autofac</tags>
   </metadata>
   <files>
