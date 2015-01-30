@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\AutofacFacts.cs" />
+    <Compile Include="Autofac\AutofacRequestScopeFacts.cs" />
     <Compile Include="IDependency.cs" />
     <Compile Include="IocInjectedFacts.cs" />
     <Compile Include="IOtherDependency.cs" />

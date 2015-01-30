@@ -4,6 +4,7 @@ namespace Xunit.Ioc.Autofac
 {
     /// <summary>
     /// Implements <see cref="IDependencyResolver"/> and wraps an Autofac <see cref="ILifetimeScope"/>.
+    /// Scopes created by this class are tagged as the Test scope.
     /// </summary>
     /// <remarks>
     /// Typically you'd use this to wrap your <see cref="IContainer"/> instance and return it
