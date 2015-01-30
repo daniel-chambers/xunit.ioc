@@ -89,6 +89,11 @@ public class MyComponentFacts
 
 If you'd like to see this in action, take a look at the tests in the code (in particular look at the AutofacFacts test class).
 
+### InstancePerRequest (Autofac)
+If you're trying to integration test a web project and you're using Autofac's InstancePerRequest registration configuration, you'll find the normal ``AutofacDependencyResolver`` class will result in errors because no request lifetime scope is being created in the context of your tests.
+
+To resolve this, use the ``AutofacRequestScopeDependencyResolver`` class instead; this will create a request lifetime scope around each test, so your registrations will work correctly.
+
 ## Contributors
 * [Daniel Chambers](https://github.com/daniel-chambers)
 * [Peter Major](https://github.com/petermajor)
